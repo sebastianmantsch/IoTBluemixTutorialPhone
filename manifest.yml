@@ -1,5 +1,5 @@
 declared-services:
-  iot-phone-cloudant-cloudantNoSQLDB:
+  iot-cloudant-cloudantNoSQLDB:
     label: cloudantNoSQLDB
     plan: Shared
   iot-iotf-service:
@@ -8,7 +8,7 @@ declared-services:
 
 applications:
 - services:
-  - iot-phone-cloudant-cloudantNoSQLDB
+  - iot-cloudant-cloudantNoSQLDB
   - iot-iotf-service
   host: iot-phone
   name: iot-phone
