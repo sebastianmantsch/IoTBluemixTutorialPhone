@@ -1,3 +1,5 @@
-# iot-html5-phone
+# Phone HTML application for Tutorial
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibm-messaging/iot-html5-phone)
+Deploy this app to your bluemix account to later use its sensor data in your NodeRED flows.
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](http://bit.ly/2ezXKNh)
