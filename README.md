@@ -2,7 +2,7 @@
 
 Deploy this app to your bluemix account to later use its sensor data in your NodeRED flows.
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](http://bit.ly/2ezXKNh)
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://github.com/sebastianmantsch/IoTBluemixTutorialPhone.git)
 
 Please see the other repository for further instructions to use the generated data:
-[NodeRED Repository](https://bitbucket.org/bmcrprojectteam/node-red-bluemix-iot-2016)
+[NodeRED Repository](https://github.com/sebastianmantsch/IoTBluemixTutorialNode)
