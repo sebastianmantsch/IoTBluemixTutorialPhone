@@ -65,20 +65,21 @@ app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
 
 var device_credentials = null;
+var dbName = 'device_credentials';
 Cloudant({account:db_props.username, password:db_props.password}, function(err, cloudant) {
 	console.log('Connected to Cloudant')
 
 	cloudant.db.list(function(err, all_dbs) {
-		if (all_dbs.length == 0) {
-			// first time -- need to create the iotzone-devices database
-			cloudant.db.create('device_credentials', function() {
-				device_credentials = cloudant.use('device_credentials');
-				console.log("created DB device_credentials");
-			});
-		} else {
-			console.log("found DB device_credentials");
-			device_credentials = cloudant.use('device_credentials');
-		}
+	   if (all_dbs.indexOf(dbName) < 0) {
+	      // first time -- need to create the iotzone-devices database
+	      cloudant.db.create(dbName, function() {
+		device_credentials = cloudant.use(dbName);
+		console.log("created DB " + dbName);
+	      });
+	    } else {
+	      console.log("found DB " + dbName);
+	      device_credentials = cloudant.use(dbName);
+	    }
 	})
 })
 
